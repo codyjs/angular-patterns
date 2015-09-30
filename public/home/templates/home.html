@@ -1,0 +1,8 @@
+<div>
+  <h1>Projects</h1>
+  <ul>
+    <li ng-repeat="project in ctrl.projects track by $index">
+      <a href="/#/project/{{$index}}">{{project.name}}</a>
+    </li>
+  </ul>
+</div>
