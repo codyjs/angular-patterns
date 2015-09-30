@@ -1,5 +1,5 @@
 {
-  "name": "model-test",
+  "name": "angular-patterns",
   "version": "1.0.0",
   "description": "",
   "main": "Gruntfile.js",
@@ -11,7 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "express": "^4.13.3",
-    "grunt-contrib-watch": "^0.6.1",
     "grunt-express": "^1.4.1"
   }
 }
