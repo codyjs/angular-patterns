@@ -9,7 +9,7 @@
         template: '<home-container></home-container>'
       })
       .when('/project/:projectId', {
-        template: '<project-details-container></project-details-container>'
+        template: '<project-view-container></project-view-container>'
       });
   }
 })();

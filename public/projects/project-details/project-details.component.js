@@ -16,7 +16,7 @@
       controller: 'ProjectDetails',
       controllerAs: 'ctrl',
       bindToController: true,
-      templateUrl: '/projects/project/project.html'
+      templateUrl: '/projects/project-details/project-details.html'
     };
 
     return directive;
