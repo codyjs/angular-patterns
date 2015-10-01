@@ -28,7 +28,7 @@ __Sources:__
 * [Non-Singleton Services in Angular (StackOverflow)](http://stackoverflow.com/questions/16626075/non-singleton-services-in-angular)
 
 ### Component-Container Pattern
-A cool, react-esque way of rethinking angular controllers, especially with Angular 2 in mind.
+A cool, react-esque way of rethinking angular controllers, especially with Angular 2 in mind. In this pattern, controllers are replaced with directives.
 
 #### Components
 A component takes the place of a simple controller, and is similar in that it is responsible for providing a "View Model" to the DOM in order to render the UI. The difference is, a component delegates data retrieval to a container and then explicitly declares which data needs to be passed in through its isolate scope. In this way, a component has the potential to be more modular, as well as leaner and more focused than your average Angular controller.

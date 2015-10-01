@@ -23,9 +23,20 @@
       });
     }
 
-    function save(obj) {
-      console.log('Saved '+ obj.name + ':');
-      console.log(obj);
+    function save(project) {
+      if (project.hasOwnProperty('id')){
+        // update
+        return $http.put('/api/project/'+project.id+'/' , project).then(function(response){
+          return response.data;
+        });
+
+      } else {
+        // create
+        return $http.post('/api/project/' , project).then(function(response){
+          return response.data;
+        });
+
+      }
     }
   }
 })();

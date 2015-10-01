@@ -1,22 +1,22 @@
 (function(){
   angular
     .module('project-test')
-    .directive('projectDetailsComponent', ProjectDetailsCmp)
-    .controller('ProjectDetailsController', ProjectDetailsCtrl);
+    .directive('projectDetails', ProjectDetailsDir)
+    .controller('ProjectDetails', ProjectDetailsCtrl);
 
   ProjectDetailsCtrl.$inject = [];
 
   // Component
-  function ProjectDetailsCmp(){
+  function ProjectDetailsDir(){
     var directive = {
       restrict: 'E',
       scope: {
         project: '='
       },
-      controller: 'ProjectDetailsController',
+      controller: 'ProjectDetails',
       controllerAs: 'ctrl',
       bindToController: true,
-      templateUrl: '/projects/templates/project-details.html'
+      templateUrl: '/projects/project/project.html'
     };
 
     return directive;

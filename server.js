@@ -5,14 +5,15 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 var data = [
-  {name: "Project1", data: "data1", id: "1"},
-  {name: "Project2", data: "data2", id: "2"},
-  {name: "Project3", data: "data3", id: "3"}
+  {name: "Test Project", data: "data", id: 1},
+  {name: "Manhattan Project", data: "data2", id: 2},
+  {name: "Project Runway", data: "data3", id: 3}
 ];
 
 var uuid = 3;
 
 function findProject(id){
+  id = parseInt(id);
   var project = false;
   data.forEach(function(element, index, array){
     if (element.id === id) {

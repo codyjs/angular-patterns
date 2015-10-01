@@ -13,10 +13,15 @@
 
     Project.prototype= {
       $save: function() {
-        ModelResource.save(this);
+        ProjectResource.save(this).then(function(data){
+          console.log(data);
+        });
+      },
+      $validate : function(){
+        if (this.name === '' || this.data === '') return false;
+        return true;
       }
       // Bind any other application-speciic logic here
-      // $validate : function(){...}
     };
 
     function getProjectList() {
@@ -37,9 +42,14 @@
       });
     }
 
+    function newProject() {
+      return new Project({name: '', data: ''});
+    }
+
     return {
       getProjectList : getProjectList,
-      getProject : getProject
+      getProject : getProject,
+      newProject : newProject
     };
   }
 })();
