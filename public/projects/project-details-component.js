@@ -16,7 +16,7 @@
       controller: 'ProjectDetailsController',
       controllerAs: 'ctrl',
       bindToController: true,
-      template: '<div>{{ctrl.project}}</div>'
+      templateUrl: '/projects/templates/project-details.html'
     };
 
     return directive;
