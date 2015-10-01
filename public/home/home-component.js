@@ -6,7 +6,6 @@
 
   HomeCtrl.$inject = [];
 
-  // Component
   function HomeCmp() {
     var directive = {
       restrict : 'E',
@@ -23,7 +22,6 @@
   }
 
 
-  // Controller
   function HomeCtrl() {
     var vm = this;
   }

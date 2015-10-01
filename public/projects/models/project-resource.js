@@ -5,11 +5,6 @@
 
   ProjectResource.$inject = ['$q'];
 
-  /*
-  * SERVICE: Project Resource
-  * This service exposes an API to the Project Factory for sending and receiving
-  * data from the server.
-  */
   function ProjectResource($q) {
 
     this.getList = getList;
