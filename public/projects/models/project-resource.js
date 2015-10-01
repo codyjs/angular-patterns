@@ -3,30 +3,24 @@
     .module('project-test')
     .service('ProjectResource', ProjectResource);
 
-  ProjectResource.$inject = ['$q'];
+  ProjectResource.$inject = ['$http'];
 
-  function ProjectResource($q) {
+  function ProjectResource($http) {
 
     this.getList = getList;
     this.get = get;
     this.save = save;
 
-    var data = [
-      {"name": "Project1", "data": "data1"},
-      {"name": "Project2", "data": "data2"},
-      {"name": "Project3", "data": "data3"}
-    ];
-
     function getList() {
-      var deferred = $q.defer();
-      deferred.resolve(data);
-      return deferred.promise;
+      return $http.get('/api/projects/').then(function(response){
+        return response.data;
+      });
     }
 
     function get(id) {
-      var deferred = $q.defer();
-      deferred.resolve(data[id]);
-      return deferred.promise;
+      return $http.get('/api/project/'+ id + '/').then(function(response){
+        return response.data;
+      });
     }
 
     function save(obj) {

@@ -20,7 +20,7 @@ A nice way to handle interacting with models in controllers.
 We use the concept of a factory to create multiple new instances (not just the singleton that an Angular factory creates for us) of our models. We can then attach methods to these objects that encapsulate the application-specific logic that may be attached to them, such as validation or model persistance. So, for example, instead of having to define the behavior for saving a model to the database _inside the controller_, we can attach a `save()` method to the model itself, and in the controller simply call `model.save()`.
 
 #### Resources
-These services exposes an API to the Project Factory for sending and receiving data from the server. In order to preserve separation of concerns, it is a good idea to keep this abstracted away from your factories.
+These services exposes an API to your factories for sending and receiving data from the server. In order to preserve separation of concerns, it is a good idea to keep this abstracted away from your factories.
 
 __Sources:__
 
