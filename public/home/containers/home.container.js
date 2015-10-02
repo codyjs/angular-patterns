@@ -1,26 +1,13 @@
 (function(){
   angular
     .module('project-test')
-    .directive('homeContainer', HomeContainerDir)
     .controller('HomeContainer', HomeContainerCtrl);
 
-  HomeContainerCtrl.$inject = ['ProjectFactory'];
+  HomeContainerCtrl.$inject = ['ProjectFactory', 'projectList'];
 
-  function HomeContainerDir() {
-    var directive = {
-      restrict : 'E',
-      controller: 'HomeContainer',
-      controllerAs: 'container',
-      bindToController: true,
-      templateUrl: '/home/containers/home.html'
-    };
-
-    return directive;
-  }
-
-  function HomeContainerCtrl(ProjectFactory) {
+  function HomeContainerCtrl(ProjectFactory, projectList) {
     var vm = this;
-    vm.projects = [];
+    vm.projects = projectList;
     vm.newProject = ProjectFactory.newProject();
     vm.links = [
       {text: 'Click Me', url: '/'},

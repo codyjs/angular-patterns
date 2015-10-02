@@ -6,10 +6,24 @@
   function routeConfig($routeProvider, $locationProvider){
     $routeProvider
       .when('/', {
-        template: '<home-container></home-container>'
+        controller: 'HomeContainer',
+        controllerAs: 'container',
+        templateUrl: '/home/containers/home.html',
+        resolve: {
+          projectList : function(ProjectFactory){
+            return ProjectFactory.getProjectList();
+          }
+        }
       })
       .when('/project/:projectId', {
-        template: '<project-view-container></project-view-container>'
+        controller: 'ProjectViewContainer',
+        controllerAs: 'container',
+        templateUrl: '/projects/containers/project-view.html',
+        resolve: {
+          project: function($route, ProjectFactory){
+            return ProjectFactory.getProject($route.current.params.projectId);
+          }
+        }
       });
   }
 })();
