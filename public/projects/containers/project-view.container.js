@@ -3,9 +3,9 @@
     .module('project-test')
     .controller('ProjectViewContainer', ProjectViewContainerCtrl);
 
-  ProjectViewContainerCtrl.$inject = ['project', '$routeParams'];
+  ProjectViewContainerCtrl.$inject = ['project'];
 
-  function ProjectViewContainerCtrl(project, $routeParams) {
+  function ProjectViewContainerCtrl(project) {
     var vm = this;
     vm.project = project;
 
