@@ -26,5 +26,9 @@
     ProjectFactory.getProject($routeParams.projectId).then(function(project){
       vm.project = project;
     });
+
+    vm.links = [
+      {text: 'Back to Home', url: '/'}
+    ];
   }
 })();

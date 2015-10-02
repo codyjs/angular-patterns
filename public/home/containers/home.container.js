@@ -22,9 +22,14 @@
     var vm = this;
     vm.projects = [];
     vm.newProject = ProjectFactory.newProject();
-    vm.getProjectList = getProjectList;
-    vm.saveNewProject = saveNewProject;
+    vm.links = [
+      {text: 'Click Me', url: '/'},
+      {text: 'Click Me', url: '/'},
+      {text: 'Click Me', url: '/'}
+    ];
 
+    vm.saveNewProject = saveNewProject;
+    vm.getProjectList = getProjectList;
     vm.getProjectList();
 
     function getProjectList() {

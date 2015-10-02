@@ -1,9 +1,13 @@
 <div>
-  <div class="jumbotron">
-    <h1>{{ctrl.project.name}}</h1>
-  </div>
-  <h3>Project Data:</h3>
-  <div>
-    <pre>{{ctrl.project.data}}</pre>
-  </div>
+  <table class="table table-bordered">
+    <tr>
+      <th>Project Name</th>
+      <td>{{ctrl.project.name}}</td>
+    </tr>
+    <tr>
+      <th>Project Data</th>
+      <td>{{ctrl.project.data}}</td>
+    </tr>
+  </table>
+  <a href="#/edit/project/{{ctrl.project.id}}" class="btn btn-primary">Edit Project</a>
 </div>

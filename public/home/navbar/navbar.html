@@ -1,0 +1,11 @@
+<div class="jumbotron" style="text-align: center">
+  <h1>{{ctrl.title}}</h1>
+  <div style="display: inline-block">
+    <span ng-repeat="link in ctrl.links">
+      <a href="#{{link.url}}">{{link.text}}</a>
+      &nbsp;
+      <span ng-if="ctrl.links.length > 1 && !$last"> | </span>
+      &nbsp;
+    </span>
+  </div>
+</div>
